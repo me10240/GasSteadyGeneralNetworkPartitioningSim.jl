@@ -1,4 +1,4 @@
-name = "GasSteadyGeneralNetworkPartitioning"
+name = "GasSteadyGeneralNetworkPartitioningSim"
 uuid = "3a234755-9196-48cb-9470-2d475ad9576e"
 authors = ["Shriram Srinivasan and Kaarthik Sundar"]
 version = "0.1.0"

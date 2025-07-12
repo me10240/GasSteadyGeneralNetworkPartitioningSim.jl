@@ -1,6 +1,6 @@
 
 
-using GasSteadyGeneralNetworkPartitioning
+using GasSteadyGeneralNetworkPartitioningSim
 using JSON
 using LinearAlgebra
 using NLSolversBase
