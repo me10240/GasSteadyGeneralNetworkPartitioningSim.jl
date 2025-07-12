@@ -1,0 +1,526 @@
+2024-10-15 19:30:59 - __main__  - INFO - (network_partition_script.py:345  run_script) - Using NetworkX version 3.1
+2024-10-15 19:30:59 - __main__  - INFO - (network_partition_script.py:69  load_data_and_create_graph) - Network has 134 nodes, 133 edges, and the slack node(s) is/are [79]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 0
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:134, edges:133
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[49, 80, 61, 62, 66, 71, 53, 36, 56, 15, 19, 48, 59, 77, 81, 68, 73, 57, 51, 44, 41, 39, 24, 4, 34, 89, 3, 8, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 5, 12, 23, 45, 67, 78, 2, 6, 7, 9, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[2]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[3, 89]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:2, nbrs:[3, 89]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 1
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:121, edges:120
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 3, 4, 8, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 5, 6, 7, 9, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[3]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[4, 130, 2]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:3, nbrs:[4, 130, 2]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:119, edges:118
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 4, 8, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 5, 6, 7, 9, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[4]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[6, 5, 3]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:4, nbrs:[6, 5, 3]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 3
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:116, edges:115
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 8, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 6, 7, 9, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[6]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[7, 4]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:6, nbrs:[7, 4]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 4
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:115, edges:114
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 8, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 7, 9, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[7]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[8, 6]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:7, nbrs:[8, 6]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 5
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:114, edges:113
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 8, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 9, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[8]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[9, 132, 7]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:8, nbrs:[9, 132, 7]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 6
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:112, edges:111
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 9, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[9]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[10, 8]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:9, nbrs:[10, 8]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 7
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:111, edges:110
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 10, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[10]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[11, 133, 9]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:10, nbrs:[11, 133, 9]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 8
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:109, edges:108
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 11, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[11]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[13, 14, 10]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:11, nbrs:[13, 14, 10]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 9
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:107, edges:106
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 14, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[14]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[15, 11]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:14, nbrs:[15, 11]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 10
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:106, edges:105
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 15, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 17, 16, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[15]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[18, 16, 134, 14]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:15, nbrs:[18, 16, 134, 14]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 11
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:101, edges:100
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 19, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 18, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 21, 20, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[18]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[22, 19, 15]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:18, nbrs:[22, 19, 15]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 12
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:94, edges:93
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 22, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[22]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[24, 18]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:22, nbrs:[24, 18]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 13
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:93, edges:92
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 24, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 25, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[24]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[26, 25, 22]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:24, nbrs:[26, 25, 22]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 14
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:90, edges:89
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 26, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[26]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[27, 24]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:26, nbrs:[27, 24]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 15
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:89, edges:88
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 27, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[27]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[28, 96, 26]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:27, nbrs:[28, 96, 26]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 16
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:87, edges:86
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 28, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[28]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[29, 27]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:28, nbrs:[29, 27]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 17
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:86, edges:85
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 29, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[29]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[30, 28]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:29, nbrs:[30, 28]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 18
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:85, edges:84
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[31, 29]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:30, nbrs:[31, 29]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 19
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:84, edges:83
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 31, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[31]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[32, 97, 30]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:31, nbrs:[32, 97, 30]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 20
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:82, edges:81
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 32, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[32]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[33, 98, 31]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:32, nbrs:[33, 98, 31]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 21
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:80, edges:79
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 33, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[33]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[35, 99, 32]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:33, nbrs:[35, 99, 32]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 22
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:78, edges:77
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 53, 49, 36, 59, 81, 77, 68, 73, 57, 51, 48, 44, 41, 39, 60, 88, 87, 86, 85, 84, 83, 82, 76, 70, 69, 65, 64, 63, 74, 72, 75, 58, 55, 54, 52, 50, 47, 46, 43, 42, 40, 38, 37, 35]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[35]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[36, 33]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:35, nbrs:[36, 33]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 23
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:77, edges:76
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 49, 36, 61, 62, 66, 71, 81, 51, 48, 41, 39, 44, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 42, 40, 38, 37, 43, 46, 47, 50, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[36]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[43, 41, 37, 35]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:36, nbrs:[43, 41, 37, 35]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 24
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:66, edges:65
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 49, 61, 62, 66, 71, 81, 51, 48, 44, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 43, 46, 47, 50, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[43]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[44, 36]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:43, nbrs:[44, 36]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 25
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:65, edges:64
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 49, 61, 62, 66, 71, 81, 51, 48, 44, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 46, 47, 50, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[44]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[46, 105, 43]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:44, nbrs:[46, 105, 43]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 26
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:63, edges:62
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 49, 61, 62, 66, 71, 81, 51, 48, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 46, 47, 50, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[46]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[47, 44]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:46, nbrs:[47, 44]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 27
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:62, edges:61
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 49, 61, 62, 66, 71, 81, 51, 48, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 47, 50, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[47]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[48, 46]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:47, nbrs:[48, 46]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 28
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:61, edges:60
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 49, 61, 62, 66, 71, 81, 51, 48, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 50, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[48]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[50, 49, 47]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:48, nbrs:[50, 49, 47]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 29
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:56, edges:55
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 61, 62, 66, 71, 81, 51, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 50, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[50]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[51, 48]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:50, nbrs:[51, 48]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 30
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:55, edges:54
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 61, 62, 66, 71, 81, 51, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 52, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[51]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[53, 52, 50]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:51, nbrs:[53, 52, 50]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 31
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:52, edges:51
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 53, 61, 62, 66, 71, 81, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 55, 54, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[53]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[57, 55, 54, 51]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:53, nbrs:[57, 55, 54, 51]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 32
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:47, edges:46
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 66, 71, 81, 57, 59, 68, 73, 77, 88, 87, 86, 85, 84, 58, 60, 70, 69, 65, 64, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[64]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[65, 63]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:64, nbrs:[65, 63]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 33
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:38, edges:37
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 71, 81, 57, 59, 73, 77, 88, 87, 86, 85, 84, 58, 60, 63, 74, 72, 75, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[71]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[61, 72, 75, 116]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:71, nbrs:[61, 72, 75, 116]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 34
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:30, edges:29
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 61, 62, 81, 57, 59, 77, 88, 87, 86, 85, 84, 58, 60, 63, 76, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[76]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[77, 61]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:76, nbrs:[77, 61]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 35
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:16, edges:15
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 81, 77, 88, 87, 86, 85, 84, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[77]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[80, 79, 76]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:77, nbrs:[80, 79, 76]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 36
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:15, edges:14
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[62, 61, 59, 57, 60, 58, 63]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[57]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[53, 58, 59]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:57, nbrs:[53, 58, 59]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 37
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:14, edges:13
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[56, 89, 34, 78, 67, 45, 23, 12]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[34]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[45, 23, 90]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:34, nbrs:[45, 23, 90]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 38
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:14, edges:13
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[80, 81, 88, 87, 86, 85, 84, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[80]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[81, 82, 128, 77]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:80, nbrs:[81, 82, 128, 77]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 39
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:12, edges:11
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[62, 61, 59, 60, 63]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[59]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[60, 61, 57]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:59, nbrs:[60, 61, 57]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 40
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:10, edges:9
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[66, 68, 70, 69, 65]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[65]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[66, 64]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:65, nbrs:[66, 64]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 41
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:10, edges:9
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[56, 89, 78, 45, 67]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[67]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[78, 56]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:67, nbrs:[78, 56]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 42
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:9, edges:8
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[88, 87, 86, 85, 84, 82, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[82]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[83, 80]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:82, nbrs:[83, 80]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 43
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:9, edges:8
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[62, 61, 63]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[61]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[71, 62, 76, 59]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:61, nbrs:[71, 62, 76, 59]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 44
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:9, edges:8
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[66, 68, 70, 69]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[66]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[68, 124, 122, 65]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:66, nbrs:[68, 124, 122, 65]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 45
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:8, edges:7
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[88, 87, 86, 85, 84, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[84, 82]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:83, nbrs:[84, 82]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 46
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:7, edges:6
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[19, 21, 20]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[19]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[21, 20, 92, 18]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:19, nbrs:[21, 20, 92, 18]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 47
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:7, edges:6
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[39, 37, 38, 40]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[40]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[39, 102]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:40, nbrs:[39, 102]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 48
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:7, edges:6
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[88, 87, 86, 85, 84]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[84]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[85, 83]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:84, nbrs:[85, 83]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 49
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:6, edges:5
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[73, 74, 72]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[72]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[73, 71]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:72, nbrs:[73, 71]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 50
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:6, edges:5
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[56, 45]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[56]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[101, 45, 112, 67]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:56, nbrs:[101, 45, 112, 67]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 51
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:6, edges:5
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[62, 63]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[62]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[120, 121, 63, 61]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:62, nbrs:[120, 121, 63, 61]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 52
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:6, edges:5
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[68, 70, 69]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[68]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[69, 125, 66]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:68, nbrs:[69, 125, 66]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 53
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:6, edges:5
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[39, 37, 38]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[37]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[38, 36]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:37, nbrs:[38, 36]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 54
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:6, edges:5
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[88, 87, 86, 85]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[88]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[87, 129]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:88, nbrs:[87, 129]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 55
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:5, edges:4
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[41, 42]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[41]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[42, 103, 36]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:41, nbrs:[42, 103, 36]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 56
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:5, edges:4
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[49]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[49]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[108, 107, 106, 48]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:49, nbrs:[108, 107, 106, 48]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 57
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:5, edges:4
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[89, 78]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[89]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[78, 123, 2]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:89, nbrs:[78, 123, 2]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 58
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:5, edges:4
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[73, 74]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[73]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[74, 119, 72]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:73, nbrs:[74, 119, 72]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 59
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:5, edges:4
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[39, 38]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[38]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[39, 37]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:38, nbrs:[39, 37]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 60
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:5, edges:4
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[87, 86, 85]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[85]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[86, 84]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:85, nbrs:[86, 84]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 61
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:4, edges:3
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[17, 16]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[16]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[17, 15]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:16, nbrs:[17, 15]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 62
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:4, edges:3
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[23, 12]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[12]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[1, 23]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:12, nbrs:[1, 23]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 63
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:4, edges:3
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[81]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[81]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[114, 115, 80]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:81, nbrs:[114, 115, 80]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 64
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:4, edges:3
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[70, 69]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[69]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[70, 68]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:69, nbrs:[70, 68]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 65
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:4, edges:3
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[39]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[39]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[100, 40, 38]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:39, nbrs:[100, 40, 38]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 66
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:4, edges:3
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[87, 86]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[86]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[87, 85]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:86, nbrs:[87, 85]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 67
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[5]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[5]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[131, 4]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:5, nbrs:[131, 4]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 68
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[25]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[25]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[95, 24]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:25, nbrs:[95, 24]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 69
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[52]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[52]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[109, 51]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:52, nbrs:[109, 51]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 70
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[55]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[55]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[111, 53]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:55, nbrs:[111, 53]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 71
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[54]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[54]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[110, 53]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:54, nbrs:[110, 53]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 72
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[75]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[75]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[117, 71]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:75, nbrs:[117, 71]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 73
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[58]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[58]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[113, 57]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:58, nbrs:[113, 57]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 74
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[60]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[60]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[127, 59]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:60, nbrs:[127, 59]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 75
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[20]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[20]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[93, 19]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:20, nbrs:[93, 19]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 76
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[21]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[21]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[94, 19]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:21, nbrs:[94, 19]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 77
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[45]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[45]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[34, 56]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:45, nbrs:[34, 56]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 78
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[63]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[63]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[64, 62]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:63, nbrs:[64, 62]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 79
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[42]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[42]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[104, 41]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:42, nbrs:[104, 41]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 80
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[78]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[78]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[67, 89]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:78, nbrs:[67, 89]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 81
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[74]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[74]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[118, 73]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:74, nbrs:[118, 73]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 82
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[17]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[17]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[91, 16]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:17, nbrs:[91, 16]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 83
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[23]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[23]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[34, 12]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:23, nbrs:[34, 12]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 84
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[70]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[70]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[126, 69]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:70, nbrs:[126, 69]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:275  partition_given_network) - Partitioning... round 85
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:3, edges:2
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[87]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[87]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[88, 86]]
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:87, nbrs:[88, 86]
+2024-10-15 19:31:04 - __main__  - INFO - (network_partition_script.py:268  partition_given_network) - Cannot partition further, no subnetworks left
+2024-10-15 19:31:04 - __main__  - DEBUG - (network_partition_script.py:177  put_slack_networks_first) - Found slack node 79 in subnetwork 0+1 
+2024-10-15 19:31:04 - __main__  - INFO - (network_partition_script.py:180  put_slack_networks_first) - All slack nodes within single subnetwork
+2024-10-15 19:31:04 - __main__  - INFO - (network_partition_script.py:303  partition_given_network) - Partitioning achieved desired size
+2024-10-15 19:31:04 - __main__  - INFO - (network_partition_script.py:307  partition_given_network) - Size of largest partition is 2
+2024-10-15 19:31:04 - __main__  - INFO - (network_partition_script.py:194  write_partition_json_file_for_julia) - Writing to json...
+2024-10-15 19:31:04 - __main__  - INFO - (network_partition_script.py:197  write_partition_json_file_for_julia) - Completed writing to json...
+2024-10-15 19:31:04 - __main__  - INFO - (network_partition_script.py:213  construct_block_cut_tree) - Block cut graph is a tree: True

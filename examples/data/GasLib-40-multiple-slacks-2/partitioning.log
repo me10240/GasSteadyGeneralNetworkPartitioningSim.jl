@@ -1,0 +1,45 @@
+2025-07-12 00:10:04 - __main__  - INFO - (network_partition_script.py:359  run_script) - Using NetworkX version 3.1
+2025-07-12 00:10:04 - __main__  - INFO - (network_partition_script.py:69  load_data_and_create_graph) - Network has 40 nodes, 45 edges, and the slack node(s) is/are [38, 26]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:289  partition_given_network) - Partitioning... round 0
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:40, edges:45
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[26, 19, 30, 10, 4, 31, 34, 35, 15, 8, 23, 22, 25, 7, 6, 13, 14, 1, 11]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[26]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[8, 27, 15, 21, 6]]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:26, nbrs:[8, 27, 15, 21, 6]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:289  partition_given_network) - Partitioning... round 1
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:16, edges:18
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[34, 35, 23, 22, 25]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[34]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[23, 35, 18]]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:34, nbrs:[23, 35, 18]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:289  partition_given_network) - Partitioning... round 2
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:15, edges:16
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[19, 10, 4, 6, 13, 14, 11, 1]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[19]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[2, 3, 4, 28]]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:19, nbrs:[2, 3, 4, 28]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:289  partition_given_network) - Partitioning... round 3
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:14, edges:16
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[35, 22, 25]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[35]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[33, 25, 34]]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:35, nbrs:[33, 25, 34]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:289  partition_given_network) - Partitioning... round 4
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:11, edges:11
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[10, 6, 13, 14, 11, 1]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[10]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[2, 3, 14, 11]]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:10, nbrs:[2, 3, 14, 11]
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:289  partition_given_network) - Partitioning... round 5
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:299  partition_given_network) - No need to partition block. Partitioning concludes after 5 rounds 
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:178  put_slack_networks_first) - Found slack node 38 in subnetwork 0+1 
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:178  put_slack_networks_first) - Found slack node 26 in subnetwork 1+1 
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:178  put_slack_networks_first) - Found slack node 26 in subnetwork 2+1 
+2025-07-12 00:10:08 - __main__  - DEBUG - (network_partition_script.py:178  put_slack_networks_first) - Found slack node 26 in subnetwork 3+1 
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:180  put_slack_networks_first) - There are 4 slack subnetworks
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:319  partition_given_network) - Partition has nonseparable  block larger than desired size
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:321  partition_given_network) - Size of largest partition is 11
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:198  write_partition_json_file_for_julia) - Can skip flow solve  on block-cut tree.
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:208  write_partition_json_file_for_julia) - Writing to json...
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:211  write_partition_json_file_for_julia) - Completed writing to json...
+2025-07-12 00:10:08 - __main__  - INFO - (network_partition_script.py:227  construct_block_cut_tree) - Block cut graph is a tree: True

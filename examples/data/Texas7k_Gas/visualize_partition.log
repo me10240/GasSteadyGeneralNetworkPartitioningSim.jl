@@ -1,0 +1,5 @@
+2025-06-17 22:11:33 - __main__  - INFO - (visualize_partition.py:213  run_script) - Using NetworkX version 3.1
+2025-06-17 22:11:33 - __main__  - INFO - (visualize_partition.py:73  load_data_and_create_graph) - Network has 2451 nodes, 2527 edges, and the slack node(s) is/are [699]
+2025-06-17 22:12:09 - __main__  - INFO - (visualize_partition.py:170  partition_given_network) - No edges between nodes in [1285, 2450, 1539, 2905, 1326, 3115, 2406, 702, 3128, 1063, 1479, 2430, 1140, 3022, 1555, 1568, 3283, 2436, 2643, 1460, 2426, 2918, 800, 1087, 3254]
+2025-06-17 22:12:09 - __main__  - INFO - (visualize_partition.py:176  partition_given_network) - Size of largest partition is 500
+2025-06-17 22:12:09 - __main__  - INFO - (visualize_partition.py:116  construct_subnetwork_graph) - Subnetwork  hypergraph is a tree: False

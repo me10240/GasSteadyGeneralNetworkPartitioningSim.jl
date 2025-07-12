@@ -1,0 +1,16 @@
+2025-07-01 10:45:31 - __main__  - INFO - (network_partition_script.py:346  run_script) - Using NetworkX version 3.1
+2025-07-01 10:45:31 - __main__  - INFO - (network_partition_script.py:69  load_data_and_create_graph) - Network has 40 nodes, 45 edges, and the slack node(s) is/are [38]
+2025-07-01 10:45:35 - __main__  - DEBUG - (network_partition_script.py:276  partition_given_network) - Partitioning... round 0
+2025-07-01 10:45:35 - __main__  - DEBUG - (network_partition_script.py:140  partition_graph) - Nodes:40, edges:45
+2025-07-01 10:45:35 - __main__  - DEBUG - (network_partition_script.py:87  create_list_of_articulation_points) - Articulation points:[26, 19, 30, 10, 4, 31, 34, 35, 15, 8, 23, 22, 25, 7, 6, 13, 14, 1, 11]
+2025-07-01 10:45:35 - __main__  - DEBUG - (network_partition_script.py:97  partition_graph_into_subgraphs_at_chosen_articulation_points) - interface_node_list:[26]
+2025-07-01 10:45:35 - __main__  - DEBUG - (network_partition_script.py:101  partition_graph_into_subgraphs_at_chosen_articulation_points) - nbr_sets:[[8, 27, 15, 21, 6]]
+2025-07-01 10:45:35 - __main__  - DEBUG - (network_partition_script.py:107  partition_graph_into_subgraphs_at_chosen_articulation_points) - node:26, nbrs:[8, 27, 15, 21, 6]
+2025-07-01 10:45:35 - __main__  - INFO - (network_partition_script.py:273  partition_given_network) - Completed 1 rounds of partitioning
+2025-07-01 10:45:35 - __main__  - DEBUG - (network_partition_script.py:178  put_slack_networks_first) - Found slack node 38 in subnetwork 0+1 
+2025-07-01 10:45:35 - __main__  - INFO - (network_partition_script.py:181  put_slack_networks_first) - All slack nodes within single subnetwork
+2025-07-01 10:45:35 - __main__  - INFO - (network_partition_script.py:306  partition_given_network) - Partition has nonseparable  block larger than desired size
+2025-07-01 10:45:35 - __main__  - INFO - (network_partition_script.py:308  partition_given_network) - Size of largest partition is 16
+2025-07-01 10:45:35 - __main__  - INFO - (network_partition_script.py:195  write_partition_json_file_for_julia) - Writing to json...
+2025-07-01 10:45:35 - __main__  - INFO - (network_partition_script.py:198  write_partition_json_file_for_julia) - Completed writing to json...
+2025-07-01 10:45:35 - __main__  - INFO - (network_partition_script.py:214  construct_block_cut_tree) - Block cut graph is a tree: True

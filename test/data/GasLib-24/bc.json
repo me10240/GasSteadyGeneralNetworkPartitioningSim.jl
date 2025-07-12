@@ -1,0 +1,47 @@
+{
+  "boundary_valve": {
+    "off": [],
+    "on": []
+  },
+  "boundary_pslack": {
+    "18": 5000000
+  },
+  "boundary_compressor": {
+    "1": {
+      "control_type": 0,
+      "value": 1.5
+    },
+    "2": {
+      "control_type": 0,
+      "value": 1.5
+    },
+    "3": {
+      "control_type": 0,
+      "value": 1.5
+    }
+  },
+  "boundary_nonslack_flow": {
+    "24": 26.638102777777775,
+    "21": 21.805555555555554,
+    "20": -39.37211111111112,
+    "19": -29.906319444444442,
+    "25": 21.805555555555554,
+    "23": 26.638102777777775,
+    "22": 21.805555555555554
+  },
+  "boundary_control_valve": {
+    "off": [],
+    "1": {
+      "control_type": 0,
+      "value": 1.0
+    },
+    "2": {
+      "control_type": 0,
+      "value": 1.0
+    },
+    "on": [
+      1,
+      2
+    ]
+  }
+}

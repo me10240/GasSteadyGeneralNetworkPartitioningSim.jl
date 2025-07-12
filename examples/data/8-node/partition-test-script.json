@@ -1,0 +1,1 @@
+{"num_partitions": 5, "interface_nodes": [8, 2, 4, 6], "slack_network_ids": [1], "slack_nodes": [1], "1": [1, 6], "2": [5, 8], "3": [8, 4], "4": [7, 3, 2, 4], "5": [2, 6]}
