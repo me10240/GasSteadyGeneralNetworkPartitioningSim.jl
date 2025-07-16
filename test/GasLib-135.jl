@@ -3,7 +3,7 @@ for k in [2, 4]
     @info "For $k partitions"
     @testset "test GasLib-135 ideal run" begin
         file = "./data/GasLib-135/"
-        exact_sol = GasSteadyGeneralNetworkPartitioning._parse_json(file * "exact_sol_ideal.json")
+        exact_sol = GasSteadyGeneralNetworkPartitioningSim._parse_json(file * "exact_sol_ideal.json")
 
         eos_var = :ideal
         ss = initialize_simulator(file, eos=eos_var, initial_guess_filename="")
@@ -25,7 +25,7 @@ for k in [2, 4]
 
     @testset "test GasLib-135 simple CNGA run" begin
         file = "./data/GasLib-135/"
-        exact_sol = GasSteadyGeneralNetworkPartitioning._parse_json(file * "exact_sol_simple_cnga.json")
+        exact_sol = GasSteadyGeneralNetworkPartitioningSim._parse_json(file * "exact_sol_simple_cnga.json")
 
         eos_var = :simple_cnga
         ss = initialize_simulator(file, eos=eos_var, initial_guess_filename="")
@@ -51,7 +51,7 @@ for k in [2, 4]
 
     @testset "test GasLib-135 full CNGA run" begin
         file = "./data/GasLib-135/"
-        exact_sol = GasSteadyGeneralNetworkPartitioning._parse_json(file * "exact_sol_full_cnga.json")
+        exact_sol = GasSteadyGeneralNetworkPartitioningSim._parse_json(file * "exact_sol_full_cnga.json")
         eos_var = :full_cnga
         ss = initialize_simulator(file, eos=eos_var, initial_guess_filename="")
         partition_data_or_file = create_partition(ss; num_partitions=k, write_to_file=false, filepath="")

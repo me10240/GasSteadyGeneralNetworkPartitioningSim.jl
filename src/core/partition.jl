@@ -31,6 +31,10 @@ function create_partition(ss::SteadySimulator;
     for (i, edge) in E 
         fr = edge["fr_node"]
         to = edge["to_node"]
+        if has_edge(g, node_map[fr], node_map[to])
+            @warn "MORE THAN ONE EDGE BETWEEN NODES $(fr) AND $(to)"
+            continue
+        end
         add_edge!(g, node_map[fr], node_map[to])
     end 
 
