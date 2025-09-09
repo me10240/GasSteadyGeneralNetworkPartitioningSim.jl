@@ -70,15 +70,26 @@ def load_data_and_create_graph(network_filename, partition_dict):
                 G.add_edge(fr_node, to_node)
                 
 
+    node_pos_given = True
     for node_id in network_data['nodes']:
-        G.nodes[int(node_id)]["pos"] = (network_data['nodes'][node_id]['x_coord'], network_data['nodes'][node_id]['y_coord'])
+        if 'x_coord' in network_data['nodes'][node_id].keys(): # or if plotting_flag is True, can check
+            G.nodes[int(node_id)]["pos"] = (network_data['nodes'][node_id]['x_coord'], network_data['nodes'][node_id]['y_coord'])
+        else:
+            node_pos_given = False
         if network_data['nodes'][node_id]['slack_bool'] == 1:
             slack_nodes.append(int(node_id))
 
     log.info("Network has {} nodes, {} edges, and the slack node(s) is/are {}".format(G.number_of_nodes(), G.number_of_edges(), slack_nodes))
 
+    num_connected_components = len(list(nx.connected_components(G)))
+    if  num_connected_components!= 1:
+        log.error("Disconnected network with {} connected components".format(num_connected_components))
+        exit()
+
     
-    pos = nx.get_node_attributes(G, "pos")
+    pos = None
+    if node_pos_given:
+        pos = nx.get_node_attributes(G, "pos")
     import matplotlib.pyplot as plt
     plt.figure(figsize=(4.5, 4.5), dpi=200)
     color_list = ["seagreen" if node_name in slack_nodes  else 'darkorange' for node_name in list(G.nodes)]
@@ -190,8 +201,10 @@ def main():
     import os
     print(os.getcwd())
 
-    dirname = "./data/Texas7k_Gas/"
+    # dirname = "./data/Texas7k_Gas/"
     # dirname = "./data/GasLib-40/"
+    dirname = "./data/NWPipeline/"
+
     partition_file = "partition_data.json"
 
     run_script(dirname, partition_file, loglevel="info")
