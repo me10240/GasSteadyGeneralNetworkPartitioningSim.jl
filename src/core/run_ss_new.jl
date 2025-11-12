@@ -3,13 +3,17 @@ using LinearAlgebra
 using NLSolversBase
 
 
-function interface_residual_jacobian!(ssp_array::Vector{SteadySimulator}, df_array::Vector{OnceDifferentiable}, partition::Dict{Any, Any}, x_dof::AbstractArray, r_dof::AbstractArray, J_dof::AbstractArray)
+function interface_residual_jacobian!(ssp_array::Vector{SteadySimulator}, df_array::Vector{OnceDifferentiable}, partition::Dict{Any, Any}, x_dof::AbstractArray, r_dof::AbstractArray, J_dof::AbstractArray, ftol_subnetwork::Float64, show_trace_flag_subnetwork::Bool, iteration_limit_subnetwork::Int, method_subnetwork::Symbol)
 
     
     update_interface_slack_dofs!(ssp_array, partition, x_dof)
     for id = 1 : partition["num_partitions"]
         @assert length(ssp_array[id].ref[:node]) > 2
-        solver = solve_on_network!(ssp_array[id], df_array[id], show_trace_flag=false, iteration_limit=100, method=:newton, sensitivity_nodes= partition[id]["interface"])
+        if show_trace_flag_subnetwork == true
+            @info "Solving partition $id..."
+        end
+
+        solver = solve_on_network!(ssp_array[id], df_array[id], show_trace_flag=show_trace_flag_subnetwork, iteration_limit=iteration_limit_subnetwork, method=method_subnetwork, sensitivity_nodes= partition[id]["interface"],ftol=ftol_subnetwork)
         
         if solver.status == nl_solve_failure
             @warn "Solver failed for partition $id"
@@ -36,9 +40,9 @@ function interface_residual_jacobian!(ssp_array::Vector{SteadySimulator}, df_arr
     return
 end
 
-function prepare_for_partition_interface_solve!(ssp_array::Vector{SteadySimulator}, df_array::Vector{OnceDifferentiable}, partition::Dict{Any, Any})::OnceDifferentiable
+function prepare_for_partition_interface_solve!(ssp_array::Vector{SteadySimulator}, df_array::Vector{OnceDifferentiable}, partition::Dict{Any, Any}, ftol_subnetwork::Float64, show_trace_flag_subnetwork::Bool, iteration_limit_subnetwork::Int, method_subnetwork::Symbol)::OnceDifferentiable
     
-    my_fun! = (r_dof, J_dof, x_dof) -> interface_residual_jacobian!(ssp_array, df_array, partition, x_dof, r_dof, J_dof)
+    my_fun! = (r_dof, J_dof, x_dof) -> interface_residual_jacobian!(ssp_array, df_array, partition, x_dof, r_dof, J_dof, ftol_subnetwork, show_trace_flag_subnetwork, iteration_limit_subnetwork, method_subnetwork)
 
     n = partition["num_interfaces"]
     r_dof = zeros(n)
@@ -57,6 +61,7 @@ function solve_on_partition_interface!(partition::Dict{Any, Any}, df::OnceDiffer
     method::Symbol=:newton,
     iteration_limit::Int64=2000, 
     show_trace_flag::Bool=false,
+    third_order_newton_flag=false,
     kwargs...)::SolverReturnPartitionInterface
 
     n = partition["num_interfaces"]
@@ -71,8 +76,10 @@ function solve_on_partition_interface!(partition::Dict{Any, Any}, df::OnceDiffer
 
     if convergence_state == false
         @info("Not converged, after $(soln.iterations) iterations with residual $(soln.residual_norm)")
-        # @info "Trying third order NR..."
-        # return third_order_nl_solve(df, soln.zero, 100, 1e-6)
+        if third_order_newton_flag == true
+            @info "Trying third order NR..."
+            return third_order_nl_solve(df, soln.zero, 100, 1e-6)
+        end
         return SolverReturnPartitionInterface(nl_solve_failure, 
             soln.iterations, 
             soln.residual_norm, 
@@ -150,7 +157,7 @@ end
 
 
 
-function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{String, Any}}, ss::SteadySimulator; eos::Symbol=:ideal, show_trace_flag::Bool=false, iteration_limit::Int=200, method::Symbol=:newton, x_guess::Vector=Vector{Float64}())::Union{Vector{Float64}, Nothing} 
+function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{String, Any}}, ss::SteadySimulator; eos::Symbol=:ideal, ftol_subnetwork::Float64 = 1e-6, show_trace_flag_subnetwork::Bool=false, show_trace_flag::Bool=false, iteration_limit_subnetwork::Int=200, iteration_limit::Int=200, method_subnetwork::Symbol=:newton, method::Symbol=:newton, random_guess_flag::Bool=false, third_order_newton_flag::Bool=false, x_guess::Vector=Vector{Float64}())::Union{Vector{Float64}, Nothing} 
 
     
     if typeof(partition_file_or_data) == String
@@ -190,16 +197,22 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
     end
 
     if isempty(x_guess)
-        @info "No initial guess provided. Using default initial guess..."
-        x_guess = ones(partition["num_interfaces"])
+        @info "No initial guess provided."
+        if random_guess_flag == true
+            @info "Using random initial guess..."
+            x_guess = rand(partition["num_interfaces"])
+        else
+            @info "Using default initial guess..."
+            x_guess = ones(partition["num_interfaces"])
+        end
     end
     
     @info "Preparing for interface solve..."
-    df = prepare_for_partition_interface_solve!(ssp_array, df_array, partition)
+    df = prepare_for_partition_interface_solve!(ssp_array, df_array, partition, ftol_subnetwork, show_trace_flag_subnetwork, iteration_limit_subnetwork, method_subnetwork)
     @info "Interface solve starting..."
     solver = solve_on_partition_interface!(partition, df; x_guess=x_guess, 
     method=method, iteration_limit=iteration_limit, 
-    show_trace_flag=show_trace_flag)
+    show_trace_flag=show_trace_flag, third_order_newton_flag=third_order_newton_flag)
     @info "Interface solve finished."
     
 
@@ -209,26 +222,7 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
     sol_return = update_solution_fields_in_ref!(ss, x_dof)
     populate_solution!(ss)
 
-    # unphysical_solution_flag = ~isempty(sol_return[:compressors_with_neg_flow]) || ~isempty(sol_return[:nodes_with_negative_pressures])
-
-    # if unphysical_solution_flag
-
-    #     return SolverReturn(unphysical_solution, 
-    #             soln.stats, 
-    #             res, 
-    #             time, soln.u, 
-    #             sol_return[:compressors_with_neg_flow], 
-    #             sol_return[:nodes_with_negative_pressures])
-        
-    # end 
-
-    # return SolverReturn(physical_solution, 
-    #     soln.stats, 
-    #     res, 
-    #     time, soln.u, 
-    #     sol_return[:compressors_with_neg_flow], 
-    #     sol_return[:nodes_with_negative_pressures])
-
+    
     @info("Completed.")
 
     return x_dof

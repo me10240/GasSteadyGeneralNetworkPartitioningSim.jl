@@ -129,11 +129,15 @@ function create_partition(ss::SteadySimulator;
         end
         @info "Partition data saved to $filepath"
     end 
-
+    
     return data
 end 
 
 function load_partition_data(data::Dict{String, Any})::Dict{Any,Any}
+
+    @info "$(data["num_partitions"]) partitions created with $(length(data["interface_nodes"])) interface nodes - $(data["interface_nodes"])" 
+    @info "Largest partition has $( maximum( [length(data[string(k)])  for k = 1 : data["num_partitions"] ]) ) nodes"
+
     partition = Dict{Any, Any}()
     num_partitions = data["num_partitions"]
     partition["num_partitions"] = num_partitions

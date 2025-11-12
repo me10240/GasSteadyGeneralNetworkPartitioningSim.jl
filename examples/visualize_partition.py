@@ -110,7 +110,7 @@ def load_data_and_create_graph(network_filename, partition_dict):
                     break
 
     node_size_list = [9 if node_name in partition_dict["interface_nodes"]  else 6 for node_name in list(G.nodes)]               
-    nx.draw_networkx_nodes(G, pos=pos, node_size = node_size_list, node_color=color_list2, alpha=0.5)
+    nx.draw_networkx_nodes(G, pos=pos, node_size = node_size_list, node_color=color_list2, alpha=0.9)
     nx.draw_networkx_edges(G, pos=pos, node_size = node_size_list, edge_color="gray", width=0.5, alpha=0.5)
     plt.show()
     return G, slack_nodes
@@ -202,10 +202,10 @@ def main():
     print(os.getcwd())
 
     # dirname = "./data/Texas7k_Gas/"
-    # dirname = "./data/GasLib-40/"
-    dirname = "./data/NWPipeline/"
+    dirname = "./data/GasLib-40/"
+    # dirname = "./data/NWPipeline/"
 
-    partition_file = "partition_data.json"
+    partition_file = "partition-test-script-new.json"
 
     run_script(dirname, partition_file, loglevel="info")
 
