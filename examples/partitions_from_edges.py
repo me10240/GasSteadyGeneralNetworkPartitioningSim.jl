@@ -94,13 +94,18 @@ def create_partition_data(G, G_truncated, remove_edge_list, slack_nodes):
     partition_dict["interface_nodes"] = []
 
     #construct vertex sequence
+    chosen_seq = None
     for seq in product(*remove_edge_list): # * is the unpacking operator 
-        if len(seq) == len(set(seq)):
-            num_edge = nx.number_of_edges(nx.induced_subgraph(G, seq))
-            if num_edge == 0:
-                break
-    
-    for i in seq:
+        num_edge = nx.number_of_edges(nx.induced_subgraph(G, set(seq)))
+        if num_edge == 0:
+            chosen_seq = set(seq)
+            break
+    if chosen_seq is None:
+        log.error("Unable to find  a vertex separator corresponding to given edge separator")
+        exit()
+
+
+    for i in chosen_seq:
         partition_dict["interface_nodes"].append(i)
         for (u,v) in remove_edge_list:
             if i == u or i == v:
@@ -152,7 +157,17 @@ def run_script(dirname, partition_file, loglevel="info"):
         network_data = json.load(read_file)
     G, slack_nodes = load_data_and_create_graph(network_data)
 
-    edge_removal =[network_data['pipes']['3'], network_data['compressors']['3'],network_data['compressors']['1']]
+    # piope[14] 17 --32
+    # pipe[15] 36--17
+    # pipe[39] 32--27
+    # pipe[36] 26--27
+
+
+    # pipe[17] 36--21
+    # pipe[2] 32--21
+    
+    # edge_removal =[network_data['pipes']['3'], network_data['compressors']['3'],network_data['compressors']['1']] # for GasLib24
+    edge_removal =[network_data['pipes']['14'], network_data['pipes']['15'], network_data['pipes']['39'], network_data['pipes']['36']] # for GasLib40
 
     G_truncated, remove_edge_list = modified_network(G, edge_removal)
     if not nx.is_connected(G_truncated):
@@ -164,7 +179,7 @@ def main():
     import os
     print(os.getcwd())
 
-    dirname = "./data/GasLib-24/"
+    dirname = "./data/GasLib-40/"
     partition_file = "partition_data_delete.json"
 
     run_script(dirname, partition_file, loglevel="info")
