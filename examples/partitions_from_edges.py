@@ -104,15 +104,21 @@ def create_partition_data(G, G_truncated, remove_edge_list, slack_nodes):
         log.error("Unable to find  a vertex separator corresponding to given edge separator")
         exit()
 
-
     for i in chosen_seq:
         partition_dict["interface_nodes"].append(i)
         for (u,v) in remove_edge_list:
-            if i == u or i == v:
-                vertex = v if i == u else u
+            if u == i:
                 for k in range(len(partitions)):
-                    if i in partitions[k] and v not in partitions[k]:
-                        partitions[k].append(vertex)
+                    if u in partitions[k]:
+                        continue
+                    if v in partitions[k] and u not in partitions[k]:
+                        partitions[k].append(u)
+            elif v == i:
+                for k in range(len(partitions)):
+                    if v in partitions[k]:
+                        continue
+                    if u in partitions[k] and v not in partitions[k]:
+                        partitions[k].append(v)
     for i in range(len(partitions)):
         partition_dict[i+1] = partitions[i]
 
