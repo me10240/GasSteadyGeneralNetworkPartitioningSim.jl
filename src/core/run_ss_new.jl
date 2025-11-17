@@ -2,6 +2,22 @@
 using LinearAlgebra
 using NLSolversBase
 
+function save_interface_guess(ss::SteadySimulator, interface_nodes::Vector, x_dof::Vector, soln_file::String)   
+    x_guess = zeros(length(interface_nodes))
+    for (i, node_id) in enumerate(interface_nodes)
+        x_guess[i] = x_dof[ss.ref[:node][node_id]["dof"]]
+    end
+    open(soln_file, "w") do f 
+            JSON.print(f, x_guess, 2)
+    end
+    return
+end
+
+function load_interface_guess(soln_file::String)::Vector{Float64}
+    x_guess = JSON.parsefile(soln_file)
+    return x_guess
+end
+
 
 function interface_residual_jacobian!(ssp_array::Vector{SteadySimulator}, df_array::Vector{OnceDifferentiable}, partition::Dict{Any, Any}, x_dof::AbstractArray, r_dof::AbstractArray, J_dof::AbstractArray, ftol_subnetwork::Float64, show_trace_flag_subnetwork::Bool, iteration_limit_subnetwork::Int, method_subnetwork::Symbol)
 
@@ -157,7 +173,7 @@ end
 
 
 
-function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{String, Any}}, ss::SteadySimulator; eos::Symbol=:ideal, ftol_subnetwork::Float64 = 1e-6, show_trace_flag_subnetwork::Bool=false, show_trace_flag::Bool=false, iteration_limit_subnetwork::Int=200, iteration_limit::Int=200, method_subnetwork::Symbol=:newton, method::Symbol=:newton, random_guess_flag::Bool=false, third_order_newton_flag::Bool=false, x_guess::Vector=Vector{Float64}())::Union{Vector{Float64}, Nothing} 
+function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{String, Any}}, ss::SteadySimulator; eos::Symbol=:ideal, ftol_subnetwork::Float64 = 1e-6, show_trace_flag_subnetwork::Bool=false, show_trace_flag::Bool=false, iteration_limit_subnetwork::Int=200, iteration_limit::Int=200, method_subnetwork::Symbol=:newton, method::Symbol=:newton, random_guess_flag::Bool=false, third_order_newton_flag::Bool=false, interface_guess_file::String=nothing, save_interface_soln_flag::Bool=false, soln_filepath::String=nothing, x_guess::Vector=Vector{Float64}())::Union{Vector{Float64}, Nothing} 
 
     
     if typeof(partition_file_or_data) == String
@@ -173,8 +189,21 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
             return nothing
         end
         partition = load_partition_data(partition_file_or_data) 
+    end
 
-        
+    interface_nodes = partition["interface_nodes"]
+
+    if isfile(interface_guess_file)
+        x_guess_input = load_interface_guess(interface_guess_file)
+        if length(x_guess_input) != length(interface_nodes)
+            @warn("interface guess file incompatible")
+            # x_guess = Vector{Float64}()
+        else
+            @info("Loaded solution file for initial guess")
+            x_guess = x_guess_input
+        end
+    # else
+        # x_guess = Vector{Float64}()
     end
 
     set_interface_withdrawals!(ss, partition)
@@ -218,6 +247,12 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
 
     @info "Combining subnetwork solutions to get solution for full network..."
     x_dof = combine_subnetwork_solutions(ss, ssp_array)
+
+    if save_interface_soln_flag == true
+        @info("Saved interface solution in file")
+        save_interface_guess(ss, interface_nodes, x_dof, soln_filepath)
+    end
+
 
     sol_return = update_solution_fields_in_ref!(ss, x_dof)
     populate_solution!(ss)

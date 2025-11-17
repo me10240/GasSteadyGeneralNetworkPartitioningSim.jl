@@ -83,12 +83,10 @@ function create_partition(ss::SteadySimulator;
 
     selected_seq  = nothing
     for seq in interface_seq
-        if allunique(seq) == false
-            continue
-        end
-        num_edges = test_vertex_sequence(g, collect(seq))
+        new_seq = unique(collect(seq))  #remove repeated vertices
+        num_edges = test_vertex_sequence(g, collect(new_seq))
         if num_edges == 0
-            selected_seq = seq
+            selected_seq = new_seq
             break
         end
     end
@@ -96,6 +94,7 @@ function create_partition(ss::SteadySimulator;
         @error "No valid interface sequence found!"
         return Dict{String, Any}()
     end
+
 
     for i in selected_seq
         push!(data["interface_nodes"], V[i][1])

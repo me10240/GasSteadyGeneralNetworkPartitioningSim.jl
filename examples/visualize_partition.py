@@ -91,14 +91,18 @@ def load_data_and_create_graph(network_filename, partition_dict):
     if node_pos_given:
         pos = nx.get_node_attributes(G, "pos")
     import matplotlib.pyplot as plt
-    plt.figure(figsize=(4.5, 4.5), dpi=200)
+    # plt.figure(figsize=(4.5, 4.5), dpi=200)
+    plt.figure(figsize=(3, 3), dpi=200, frameon=False)
+
     color_list = ["seagreen" if node_name in slack_nodes  else 'darkorange' for node_name in list(G.nodes)]
     nx.draw_networkx(G, pos=pos, with_labels=False, node_size= 5, font_size=5, font_weight='bold', node_color=color_list, edge_color="black")
     
 
     num_partitions = partition_dict["num_partitions"]
     color_array = ["darkorange", "seagreen", "cornflowerblue", "cyan", "magenta", "peru", "red", "salmon", "darkviolet", "springgreen"]
-    plt.figure(figsize=(4.5, 4.5), dpi=200)
+    # plt.figure(figsize=(4.5, 4.5), dpi=200)
+    plt.figure(figsize=(3, 3), dpi=200, frameon=False)
+
     color_list2 = []
     for node_name in list(G.nodes):
         if node_name in partition_dict["interface_nodes"]:
@@ -109,9 +113,11 @@ def load_data_and_create_graph(network_filename, partition_dict):
                     color_list2.append(color_array[i-1])
                     break
 
-    node_size_list = [9 if node_name in partition_dict["interface_nodes"]  else 6 for node_name in list(G.nodes)]               
-    nx.draw_networkx_nodes(G, pos=pos, node_size = node_size_list, node_color=color_list2, alpha=0.9)
+    node_size_list = [12 if node_name in partition_dict["interface_nodes"]  else 6 for node_name in list(G.nodes)]               
+    nx.draw_networkx_nodes(G, pos=pos, node_size = node_size_list, node_color=color_list2, alpha=0.5)
     nx.draw_networkx_edges(G, pos=pos, node_size = node_size_list, edge_color="gray", width=0.5, alpha=0.5)
+    plt.box(False)
+    plt.savefig("Texas.pdf", bbox_inches="tight")
     plt.show()
     return G, slack_nodes
 
@@ -130,6 +136,7 @@ def construct_subnetwork_graph(p_dict, full_network=None):
                 G.add_edge(node, j)
     tree_status = nx.is_tree(G)
     log.info("Subnetwork  hypergraph is a tree: {}".format(tree_status))
+
 
     
     if full_network:
@@ -201,11 +208,17 @@ def main():
     import os
     print(os.getcwd())
 
-    # dirname = "./data/Texas7k_Gas/"
-    dirname = "./data/GasLib-40/"
+    dirname = "./data/Texas7k_Gas/"
+    # dirname = "./data/GasLib-40/"
     # dirname = "./data/NWPipeline/"
 
-    partition_file = "partition-test-script-new.json"
+    # partition_file = "partition-test-script-new.json"
+    # partition_file = "partition_data.json"
+    # partition_file = "partition_data_delete.json"
+    partition_file = "partition_debug.json"
+
+
+
 
     run_script(dirname, partition_file, loglevel="info")
 
