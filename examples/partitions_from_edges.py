@@ -3,7 +3,7 @@ import logging
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG) # decides which events should be propagated
 import networkx as nx
-from itertools import product
+import itertools
 
 class CustomLogFormatter(logging.Formatter):
     format = "%(asctime)s - %(name)s  - %(levelname)s - (%(filename)s:%(lineno)d  %(funcName)s) - %(message)s"
@@ -93,13 +93,27 @@ def create_partition_data(G, G_truncated, remove_edge_list, slack_nodes):
     partition_dict["slack_nodes"] = slack_nodes
     partition_dict["interface_nodes"] = []
 
+    vertex_sequence = list(itertools.chain(*remove_edge_list))
+    break_early_flag = False
+    if len(vertex_sequence) == len(set(vertex_sequence)):
+        log.info("All vertices distinct in cut edges, so assign first permissible vertex separator")
+        break_early_flag = True
+    
     #construct vertex sequence
     chosen_seq = None
-    for seq in product(*remove_edge_list): # * is the unpacking operator 
+    candidate_seq = []
+    for seq in itertools.product(*remove_edge_list): # * is the unpacking operator 
         num_edge = nx.number_of_edges(nx.induced_subgraph(G, set(seq)))
         if num_edge == 0:
-            chosen_seq = set(seq)
-            break
+            candidate_seq.append(set(seq))
+            # chosen_seq = set(seq)
+            if break_early_flag:
+                break
+    
+    if candidate_seq:
+        candidate_seq.sort(reverse=False, key=lambda c: len(c)) #ascending
+        chosen_seq = candidate_seq[0]
+
     if chosen_seq is None:
         log.error("Unable to find  a vertex separator corresponding to given edge separator")
         exit()
