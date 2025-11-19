@@ -5,10 +5,20 @@ using JSON
 using LinearAlgebra
 using NLSolversBase
 
-#interface solve params
 
-
-#subnetwork solve  params
+params_NT = (
+    ftol_subnetwork=1e-7, 
+    show_trace_flag_subnetwork=false,
+    iteration_limit_subnetwork=100,
+    method_subnetwork=:newton,
+    third_order_newton_flag=false,
+    random_guess_flag=true,
+    show_trace_flag=true, 
+    iteration_limit=10,
+    method=:newton,
+    save_interface_soln_flag = true
+    )
+    
 
 # file = "./data/8-node/"
 file = "./data/GasLib-40/"
@@ -27,10 +37,12 @@ partition_data_or_file = create_partition(ss; num_partitions=2, write_to_file=tr
 # partition_data_or_file = file * "partition-test-script-dummy.json"
 
 
-x_guess = [1.26, 2.84]
+x_guess = [1.0, 2.0]
 
 
-t21 = @elapsed x_dof = run_partitioned_ss(partition_data_or_file, ss, eos=eos_var, ftol_subnetwork=1e-7, show_trace_flag_subnetwork=false, show_trace_flag=true, iteration_limit_subnetwork=100, iteration_limit=10, method_subnetwork=:newton, method=:newton, random_guess_flag=true, third_order_newton_flag=false, interface_guess_file=soln_file, save_interface_soln_flag = true, soln_filepath=soln_file, x_guess=x_guess);
+# t21 = @elapsed x_dof = run_partitioned_ss(partition_data_or_file, ss; eos=eos_var, ftol_subnetwork=1e-7, show_trace_flag_subnetwork=false, show_trace_flag=true, iteration_limit_subnetwork=100, iteration_limit=10, method_subnetwork=:newton, method=:newton, random_guess_flag=true, third_order_newton_flag=false, interface_guess_file=soln_file, save_interface_soln_flag = true, soln_filepath=soln_file, x_guess=x_guess);
+
+t21 = @elapsed x_dof = run_partitioned_ss(partition_data_or_file, ss; eos=eos_var, interface_guess_file=soln_file, soln_filepath=soln_file, x_guess=x_guess, params_NT...);
 
 if isnothing(x_dof) == false
     df = prepare_for_nonlin_solve!(ss)

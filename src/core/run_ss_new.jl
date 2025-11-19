@@ -171,9 +171,9 @@ function solve_on_network!(ss::SteadySimulator, df::OnceDifferentiable; x_guess:
         sol_return[:nodes_with_pressure_not_in_domain])
 end
 
+# function run_partitioned_ss(subnetwork_solve::NamedTuple, interface_solve::NamedTuple)
 
-
-function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{String, Any}}, ss::SteadySimulator; eos::Symbol=:ideal, ftol_subnetwork::Float64 = 1e-6, show_trace_flag_subnetwork::Bool=false, show_trace_flag::Bool=false, iteration_limit_subnetwork::Int=200, iteration_limit::Int=200, method_subnetwork::Symbol=:newton, method::Symbol=:newton, random_guess_flag::Bool=false, third_order_newton_flag::Bool=false, interface_guess_file::String=nothing, save_interface_soln_flag::Bool=false, soln_filepath::String=nothing, x_guess::Vector=Vector{Float64}())::Union{Vector{Float64}, Nothing} 
+function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{String, Any}}, ss::SteadySimulator; eos::Symbol=:ideal, ftol_subnetwork::Float64 = 1e-6, show_trace_flag_subnetwork::Bool=false, show_trace_flag::Bool=false, iteration_limit_subnetwork::Int=200, iteration_limit::Int=200, method_subnetwork::Symbol=:newton, method::Symbol=:newton, random_guess_flag::Bool=false, third_order_newton_flag::Bool=false, interface_guess_file::String="", save_interface_soln_flag::Bool=false, soln_filepath::String="", x_guess::Vector=Vector{Float64}())::Union{Vector{Float64}, Nothing} 
 
     
     if typeof(partition_file_or_data) == String
@@ -195,15 +195,16 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
 
     if isfile(interface_guess_file)
         x_guess_input = load_interface_guess(interface_guess_file)
+        @info("Loaded  initial guess from file")
         if length(x_guess_input) != length(interface_nodes)
-            @warn("interface guess file incompatible")
+            @warn("Dimension mismatch in initial guess from file. Will use input x_guess  if provided.")
             # x_guess = Vector{Float64}()
         else
-            @info("Loaded solution file for initial guess")
             x_guess = x_guess_input
+            @info("x_guess updated with initial guess from file")
         end
-    # else
-        # x_guess = Vector{Float64}()
+    else
+        @info "initial guess will use input x_guess if provided."
     end
 
     set_interface_withdrawals!(ss, partition)
@@ -226,7 +227,7 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
     end
 
     if isempty(x_guess)
-        @info "No initial guess provided."
+        @info "x_guess not provided."
         if random_guess_flag == true
             @info "Using random initial guess..."
             x_guess = rand(partition["num_interfaces"])

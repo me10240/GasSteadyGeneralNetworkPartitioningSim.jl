@@ -73,28 +73,50 @@ function create_partition(ss::SteadySimulator;
         partitions[i] = [ V[k][1] for k in conn_comps[i] ]
     end 
 
+    
+
     vertex_list = []
+    vertex_sequence =[]
     for edge in cut_edge_list
         src = edge.src
         dst = edge.dst
-        push!(vertex_list, [src, dst])
+        push!(vertex_sequence, [src, dst])
+        push!(vertex_list, src)
+        push!(vertex_list, dst)
     end
-    interface_seq = collect(Iterators.product(vertex_list...))[:]
+    
+    break_early_flag = false
+    if allunique(vertex_list)
+        @info "All vertices distinct in cut edges, so assign first permissible vertex separator"
+        break_early_flag = true
+    end
 
+    interface_seq = collect(Iterators.product(vertex_sequence...))[:]
+
+    candidate_seq = Vector()
     selected_seq  = nothing
     for seq in interface_seq
         new_seq = unique(collect(seq))  #remove repeated vertices
         num_edges = test_vertex_sequence(g, collect(new_seq))
         if num_edges == 0
-            selected_seq = new_seq
-            break
+            push!(candidate_seq, new_seq)
+            # selected_seq = new_seq
+            if break_early_flag
+                break
+            end
         end
     end
+
+
+    if length(candidate_seq) > 0
+        sort!(candidate_seq, by = x->length(x), rev=false) # ascending
+        selected_seq = candidate_seq[1]
+    end
+
     if isa(selected_seq, Nothing)
         @error "No valid interface sequence found!"
         return Dict{String, Any}()
     end
-
 
     for i in selected_seq
         push!(data["interface_nodes"], V[i][1])
