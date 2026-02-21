@@ -17,7 +17,7 @@ function test_vertex_sequence(g::SimpleGraph, vertex_sequence::Vector)::Int64
     return ne(g_induced)
 end
 function create_partition(ss::SteadySimulator; 
-    num_partitions=4, write_to_file = false, filepath = "partition-dummy.json")::Dict{String, Any}
+    num_partitions=4, break_early_flag=false, write_to_file = false, filepath = "partition-dummy.json")::Dict{String, Any}
 
     V = ref(ss, :node) |> collect 
     node_map = Dict(V[i][1] => i for i in range(1, length(V)))
@@ -43,6 +43,8 @@ function create_partition(ss::SteadySimulator;
 
     ## for partition: 
     parts = Metis.partition(g, num_partitions) #, alg=:RECURSIVE)
+
+    @info "METIS run complete. Postprocessing cut edges to proceed"
 
     data = Dict{Any,Any}(
         "num_partitions" => 0, 
@@ -85,11 +87,22 @@ function create_partition(ss::SteadySimulator;
         push!(vertex_list, dst)
     end
     
-    break_early_flag = false
+
+    @info "Attempting to find vertex sequence for vertex separator by exhaustive enumeration"
+    
+    if break_early_flag == false
+        @info "Trying to find optimal separator...this could take a while"
+    else
+        @info "Will assign first permissible vertex separator"
+    end
+
     if allunique(vertex_list)
-        @info "All vertices distinct in cut edges, so assign first permissible vertex separator"
+        @info "All vertices distinct in cut edges, so will assign first permissible vertex separator irrespective of user input"
         break_early_flag = true
     end
+
+    
+
 
     interface_seq = collect(Iterators.product(vertex_sequence...))[:]
 
