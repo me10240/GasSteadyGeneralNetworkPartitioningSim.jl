@@ -212,6 +212,11 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
 
     num_partition = partition["num_partitions"]
 
+
+    #------Cond number array-------------#
+    cond_number_array = Vector{Float64}()
+    #------------------------------------#
+
     ssp_array = Vector{SteadySimulator}()
     for i = 1 : num_partition
             push!(ssp_array, initialize_simulator_subnetwork(ss, partition[i]["node_list"], eos))
@@ -236,7 +241,16 @@ function run_partitioned_ss(partition_file_or_data::Union{AbstractString, Dict{S
             x_guess = ones(partition["num_interfaces"])
         end
     end
-    
+
+    #-- Cond number array computation----------------------------# 
+    for i = 1 : num_partition
+        push!(cond_number_array, cond(gradient(df_array[i], ones(size(df_array[i].x_df))), 1) ) #1 denotes norm
+    end
+    #------------------------------------------------------------#
+    @info "Condition number computation completed"
+    return cond_number_array
+
+
     @info "Preparing for interface solve..."
     df = prepare_for_partition_interface_solve!(ssp_array, df_array, partition, ftol_subnetwork, show_trace_flag_subnetwork, iteration_limit_subnetwork, method_subnetwork)
     @info "Interface solve starting..."
