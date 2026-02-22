@@ -91,9 +91,9 @@ function create_partition(ss::SteadySimulator;
     @info "Attempting to find vertex sequence for vertex separator by exhaustive enumeration"
     
     if break_early_flag == false
-        @info "Trying to find optimal separator...this could take a while"
+        @info "Trying to find OPTIMAL separator...this could take a while"
     else
-        @info "Will assign first permissible vertex separator"
+        @info "Trying to find a FEASIBLE separator..."
     end
 
     if allunique(vertex_list)
@@ -104,7 +104,9 @@ function create_partition(ss::SteadySimulator;
     
 
 
-    interface_seq = collect(Iterators.product(vertex_sequence...))[:]
+    # interface_seq = collect(Iterators.product(vertex_sequence...))[:]
+    interface_seq = Iterators.product(vertex_sequence...)
+
 
     candidate_seq = Vector()
     selected_seq  = nothing
